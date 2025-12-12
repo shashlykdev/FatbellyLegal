@@ -14,8 +14,8 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            color: #00ff88;
+            background: linear-gradient(135deg, #FDF6E3 0%, #F5E6D3 100%);
+            color: #5D4E37;
             min-height: 100vh;
             padding: 40px 20px;
             line-height: 1.6;
@@ -29,13 +29,51 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            color: #3D2E1F;
+            text-shadow: 0 0 20px rgba(93, 78, 55, 0.1);
         }
 
         .subtitle {
-            color: #00ff88aa;
-            margin-bottom: 40px;
+            color: #8B7355;
+            margin-bottom: 30px;
             font-size: 1.1rem;
+        }
+
+        /* Tab Navigation */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            background: rgba(93, 78, 55, 0.1);
+            border: 1px solid rgba(93, 78, 55, 0.2);
+            color: #5D4E37;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            background: rgba(93, 78, 55, 0.15);
+        }
+
+        .tab-btn.active {
+            background: #5D4E37;
+            color: #FDF6E3;
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
         }
 
         h2 {
@@ -43,19 +81,24 @@
             margin-top: 40px;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #00ff8833;
+            border-bottom: 1px solid rgba(93, 78, 55, 0.2);
+            color: #3D2E1F;
+        }
+
+        h2:first-child {
+            margin-top: 0;
         }
 
         h3 {
             font-size: 1.1rem;
             margin-top: 25px;
             margin-bottom: 10px;
-            color: #00ff88;
+            color: #4A3C2A;
         }
 
         p,
         li {
-            color: #cccccc;
+            color: #6B5B4A;
             margin-bottom: 15px;
         }
 
@@ -69,22 +112,22 @@
         }
 
         .highlight {
-            color: #00ff88;
+            color: #8B5A2B;
             font-weight: 600;
         }
 
         .phase {
             display: inline-block;
-            background: #00ff8822;
+            background: rgba(139, 90, 43, 0.15);
             padding: 2px 8px;
             border-radius: 4px;
             font-family: monospace;
-            color: #00ff88;
+            color: #8B5A2B;
         }
 
         .contact-box {
-            background: #00ff8811;
-            border: 1px solid #00ff8833;
+            background: rgba(93, 78, 55, 0.05);
+            border: 1px solid rgba(93, 78, 55, 0.15);
             border-radius: 12px;
             padding: 30px;
             margin-top: 40px;
@@ -92,7 +135,7 @@
         }
 
         .contact-box a {
-            color: #00ff88;
+            color: #8B5A2B;
             text-decoration: none;
             font-size: 1.2rem;
         }
@@ -105,18 +148,59 @@
             text-align: center;
             margin-top: 60px;
             padding-top: 30px;
-            border-top: 1px solid #00ff8822;
-            color: #666;
+            border-top: 1px solid rgba(93, 78, 55, 0.15);
+            color: #9E8B76;
         }
 
         .version {
-            background: #00ff8822;
+            background: rgba(93, 78, 55, 0.1);
             display: inline-block;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.9rem;
-            color: #00ff88;
+            color: #5D4E37;
             margin-bottom: 20px;
+        }
+
+        /* Privacy Policy Styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .data-table th,
+        .data-table td {
+            border: 1px solid rgba(93, 78, 55, 0.2);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .data-table th {
+            background: rgba(93, 78, 55, 0.1);
+            color: #3D2E1F;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            color: #6B5B4A;
+        }
+
+        .privacy-badge {
+            display: inline-block;
+            background: rgba(93, 78, 55, 0.1);
+            border: 1px solid #5D4E37;
+            color: #5D4E37;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+
+        .last-updated {
+            color: #9E8B76;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -128,63 +212,155 @@
 
         <span class="version">Version 1.0</span>
 
-        <h2>Getting Started</h2>
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('support')">Support & FAQ</button>
+            <button class="tab-btn" onclick="showTab('privacy')">Privacy Policy</button>
+        </div>
 
-        <h3>How do I set up a workout?</h3>
-        <p>Tap the <span class="highlight">+</span> button in the top-left corner to open workout settings. Adjust your
-            sets, reps, work time, and rest time by swiping up or down on each value. Tap the checkmark to confirm.</p>
+        <!-- Support & FAQ Tab -->
+        <div id="support" class="tab-content active">
+            <h2>Getting Started</h2>
 
-        <h3>How do I start the timer?</h3>
-        <p>Tap the play button or tap directly on the timer display. The app will show a countdown sequence before
-            starting your workout.</p>
+            <h3>How do I set up a workout?</h3>
+            <p>Tap the <span class="highlight">+</span> button in the top-left corner to open workout settings. Adjust
+                your
+                sets, reps, work time, and rest time by swiping up or down on each value. Tap the checkmark to confirm.
+            </p>
 
-        <h3>How do I reset the timer?</h3>
-        <p>You can reset the timer by:</p>
-        <ul>
-            <li>Double-tap anywhere on the screen</li>
-            <li>Double-tap or long-press the play/pause button</li>
-            <li>Tap the reset button when a workout is configured</li>
-        </ul>
+            <h3>How do I start the timer?</h3>
+            <p>Tap the play button or tap directly on the timer display. The app will show a countdown sequence before
+                starting your workout.</p>
 
-        <h2>Workout Phases</h2>
-        <p>During your workout, you'll see these phases:</p>
-        <ul>
-            <li><span class="phase">GET READY</span> - Preparation countdown</li>
-            <li><span class="phase">SET</span> - Almost time to begin</li>
-            <li><span class="phase">GO</span> - Start your exercise!</li>
-            <li><span class="phase">WORKOUT</span> - Active work period</li>
-            <li><span class="phase">REST</span> - Recovery between reps</li>
-            <li><span class="phase">COMPLETE</span> - You've finished!</li>
-        </ul>
+            <h3>How do I reset the timer?</h3>
+            <p>You can reset the timer by:</p>
+            <ul>
+                <li>Double-tap anywhere on the screen</li>
+                <li>Double-tap or long-press the play/pause button</li>
+                <li>Tap the reset button when a workout is configured</li>
+            </ul>
 
-        <h2>Features</h2>
-        <ul>
-            <li>Customizable sets, reps, work time, and rest time</li>
-            <li>Visual countdown sequence</li>
-            <li>Set and rep progress indicators</li>
-            <li>Works in portrait and landscape</li>
-            <li>Optimized for iPhone and iPad</li>
-            <li>Settings automatically saved</li>
-        </ul>
+            <h2>Workout Phases</h2>
+            <p>During your workout, you'll see these phases:</p>
+            <ul>
+                <li><span class="phase">GET READY</span> - Preparation countdown</li>
+                <li><span class="phase">SET</span> - Almost time to begin</li>
+                <li><span class="phase">GO</span> - Start your exercise!</li>
+                <li><span class="phase">WORKOUT</span> - Active work period</li>
+                <li><span class="phase">REST</span> - Recovery between reps</li>
+                <li><span class="phase">COMPLETE</span> - You've finished!</li>
+            </ul>
 
-        <h2>Troubleshooting</h2>
+            <h2>Features</h2>
+            <ul>
+                <li>Customizable sets, reps, work time, and rest time</li>
+                <li>Visual countdown sequence</li>
+                <li>Set and rep progress indicators</li>
+                <li>Works in portrait and landscape</li>
+                <li>Optimized for iPhone and iPad</li>
+                <li>Settings automatically saved</li>
+            </ul>
 
-        <h3>The timer isn't starting</h3>
-        <p>Make sure you've tapped the play button or timer display. If you have a workout configured, the countdown
-            sequence will play first.</p>
+            <h2>Troubleshooting</h2>
 
-        <h3>I can't see workout indicators</h3>
-        <p>Set and rep indicators only appear after configuring a workout using the + button and confirming with the
-            checkmark.</p>
+            <h3>The timer isn't starting</h3>
+            <p>Make sure you've tapped the play button or timer display. If you have a workout configured, the countdown
+                sequence will play first.</p>
 
-        <h2>Privacy</h2>
-        <p>Fatbelly does not collect, store, or transmit any personal data. Your workout settings are stored locally on
-            your device only.</p>
+            <h3>I can't see workout indicators</h3>
+            <p>Set and rep indicators only appear after configuring a workout using the + button and confirming with the
+                checkmark.</p>
 
-        <div class="contact-box">
-            <h3>Need Help?</h3>
-            <p>For questions, feedback, or feature requests:</p>
-            <a href="mailto:hello@shashlyk.dev">hello@shashlyk.dev</a>
+            <div class="contact-box">
+                <h3>Need Help?</h3>
+                <p>For questions, feedback, or feature requests:</p>
+                <a href="mailto:hello@shashlyk.dev">hello@shashlyk.dev</a>
+            </div>
+        </div>
+
+        <!-- Privacy Policy Tab -->
+        <div id="privacy" class="tab-content">
+            <h2>Privacy Policy</h2>
+            <p class="last-updated">Last updated: December 2025</p>
+
+            <div class="privacy-badge">Data Not Collected</div>
+
+            <p>Fatbelly is designed with your privacy in mind. We believe your workout data is your business, not ours.
+            </p>
+
+            <h3>Data Collection</h3>
+            <p>Fatbelly does <span class="highlight">not</span> collect, store, or transmit any personal data. Period.
+            </p>
+
+            <table class="data-table">
+                <tr>
+                    <th>Data Type</th>
+                    <th>Collected?</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Personal Information</td>
+                    <td>No</td>
+                    <td>No name, email, or account required</td>
+                </tr>
+                <tr>
+                    <td>Health & Fitness Data</td>
+                    <td>No</td>
+                    <td>No workout data leaves your device</td>
+                </tr>
+                <tr>
+                    <td>Usage Analytics</td>
+                    <td>No</td>
+                    <td>No tracking or analytics</td>
+                </tr>
+                <tr>
+                    <td>Location Data</td>
+                    <td>No</td>
+                    <td>Location is never accessed</td>
+                </tr>
+                <tr>
+                    <td>Device Identifiers</td>
+                    <td>No</td>
+                    <td>No device IDs collected</td>
+                </tr>
+                <tr>
+                    <td>Advertising Data</td>
+                    <td>No</td>
+                    <td>No ads, no ad tracking</td>
+                </tr>
+            </table>
+
+            <h3>Local Storage</h3>
+            <p>Your workout settings (sets, reps, work time, rest time) are stored locally on your device using iOS
+                UserDefaults. This data:</p>
+            <ul>
+                <li>Never leaves your device</li>
+                <li>Is not transmitted to any server</li>
+                <li>Is not shared with any third parties</li>
+                <li>Is deleted when you uninstall the app</li>
+            </ul>
+
+            <h3>Third-Party Services</h3>
+            <p>Fatbelly does not use any third-party services, SDKs, or analytics tools. The app operates entirely
+                offline.</p>
+
+            <h3>External Links</h3>
+            <p>The app contains an optional tip link that, when tapped by the user, opens an external payment service
+                (Revolut) in Safari. This is user-initiated and subject to Revolut's own privacy policy.</p>
+
+            <h3>Children's Privacy</h3>
+            <p>Fatbelly does not collect any data from anyone, including children under 13. The app is safe for users of
+                all ages.</p>
+
+            <h3>Changes to This Policy</h3>
+            <p>If we ever change our privacy practices, we will update this page. However, our commitment to not
+                collecting your data will remain unchanged.</p>
+
+            <div class="contact-box">
+                <h3>Questions?</h3>
+                <p>If you have any questions about our privacy practices:</p>
+                <a href="mailto:hello@shashlyk.dev">hello@shashlyk.dev</a>
+            </div>
         </div>
 
         <div class="footer">
@@ -192,6 +368,26 @@
             <p style="margin-top: 10px;">&copy; 2025 Fatbelly. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 
 </html>
