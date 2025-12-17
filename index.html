@@ -14,8 +14,8 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #FDF6E3 0%, #F5E6D3 100%);
-            color: #5D4E37;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2f4a 100%);
+            color: #66d9ff;
             min-height: 100vh;
             padding: 40px 20px;
             line-height: 1.6;
@@ -29,12 +29,12 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            color: #3D2E1F;
-            text-shadow: 0 0 20px rgba(93, 78, 55, 0.1);
+            color: #66d9ff;
+            text-shadow: 0 0 20px rgba(102, 217, 255, 0.3);
         }
 
         .subtitle {
-            color: #8B7355;
+            color: rgba(102, 217, 255, 0.7);
             margin-bottom: 30px;
             font-size: 1.1rem;
         }
@@ -44,12 +44,13 @@
             display: flex;
             gap: 10px;
             margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
         .tab-btn {
-            background: rgba(93, 78, 55, 0.1);
-            border: 1px solid rgba(93, 78, 55, 0.2);
-            color: #5D4E37;
+            background: rgba(102, 217, 255, 0.1);
+            border: 1px solid rgba(102, 217, 255, 0.3);
+            color: #66d9ff;
             padding: 12px 24px;
             border-radius: 8px;
             cursor: pointer;
@@ -59,12 +60,12 @@
         }
 
         .tab-btn:hover {
-            background: rgba(93, 78, 55, 0.15);
+            background: rgba(102, 217, 255, 0.2);
         }
 
         .tab-btn.active {
-            background: #5D4E37;
-            color: #FDF6E3;
+            background: #66d9ff;
+            color: #0a1628;
             font-weight: 600;
         }
 
@@ -81,8 +82,8 @@
             margin-top: 40px;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 1px solid rgba(93, 78, 55, 0.2);
-            color: #3D2E1F;
+            border-bottom: 1px solid rgba(102, 217, 255, 0.2);
+            color: #66d9ff;
         }
 
         h2:first-child {
@@ -93,12 +94,12 @@
             font-size: 1.1rem;
             margin-top: 25px;
             margin-bottom: 10px;
-            color: #4A3C2A;
+            color: rgba(102, 217, 255, 0.9);
         }
 
         p,
         li {
-            color: #6B5B4A;
+            color: rgba(102, 217, 255, 0.8);
             margin-bottom: 15px;
         }
 
@@ -112,22 +113,33 @@
         }
 
         .highlight {
-            color: #8B5A2B;
+            color: #66d9ff;
             font-weight: 600;
         }
 
         .phase {
             display: inline-block;
-            background: rgba(139, 90, 43, 0.15);
+            background: rgba(102, 217, 255, 0.15);
             padding: 2px 8px;
             border-radius: 4px;
             font-family: monospace;
-            color: #8B5A2B;
+            color: #66d9ff;
+        }
+
+        .premium-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            color: #1a1a1a;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 8px;
         }
 
         .contact-box {
-            background: rgba(93, 78, 55, 0.05);
-            border: 1px solid rgba(93, 78, 55, 0.15);
+            background: rgba(102, 217, 255, 0.05);
+            border: 1px solid rgba(102, 217, 255, 0.2);
             border-radius: 12px;
             padding: 30px;
             margin-top: 40px;
@@ -135,7 +147,7 @@
         }
 
         .contact-box a {
-            color: #8B5A2B;
+            color: #66d9ff;
             text-decoration: none;
             font-size: 1.2rem;
         }
@@ -148,17 +160,17 @@
             text-align: center;
             margin-top: 60px;
             padding-top: 30px;
-            border-top: 1px solid rgba(93, 78, 55, 0.15);
-            color: #9E8B76;
+            border-top: 1px solid rgba(102, 217, 255, 0.15);
+            color: rgba(102, 217, 255, 0.5);
         }
 
         .version {
-            background: rgba(93, 78, 55, 0.1);
+            background: rgba(102, 217, 255, 0.1);
             display: inline-block;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.9rem;
-            color: #5D4E37;
+            color: #66d9ff;
             margin-bottom: 20px;
         }
 
@@ -171,26 +183,26 @@
 
         .data-table th,
         .data-table td {
-            border: 1px solid rgba(93, 78, 55, 0.2);
+            border: 1px solid rgba(102, 217, 255, 0.2);
             padding: 12px 15px;
             text-align: left;
         }
 
         .data-table th {
-            background: rgba(93, 78, 55, 0.1);
-            color: #3D2E1F;
+            background: rgba(102, 217, 255, 0.1);
+            color: #66d9ff;
             font-weight: 600;
         }
 
         .data-table td {
-            color: #6B5B4A;
+            color: rgba(102, 217, 255, 0.8);
         }
 
         .privacy-badge {
             display: inline-block;
-            background: rgba(93, 78, 55, 0.1);
-            border: 1px solid #5D4E37;
-            color: #5D4E37;
+            background: rgba(102, 217, 255, 0.1);
+            border: 1px solid #66d9ff;
+            color: #66d9ff;
             padding: 8px 16px;
             border-radius: 20px;
             font-weight: 600;
@@ -198,9 +210,36 @@
         }
 
         .last-updated {
-            color: #9E8B76;
+            color: rgba(102, 217, 255, 0.5);
             font-size: 0.9rem;
             margin-bottom: 30px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: rgba(102, 217, 255, 0.05);
+            border: 1px solid rgba(102, 217, 255, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .feature-card h4 {
+            color: #66d9ff;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -215,7 +254,9 @@
         <!-- Tab Navigation -->
         <div class="tabs">
             <button class="tab-btn active" onclick="showTab('support')">Support & FAQ</button>
+            <button class="tab-btn" onclick="showTab('premium')">Premium</button>
             <button class="tab-btn" onclick="showTab('privacy')">Privacy Policy</button>
+            <button class="tab-btn" onclick="showTab('terms')">Terms of Use</button>
         </div>
 
         <!-- Support & FAQ Tab -->
@@ -223,22 +264,31 @@
             <h2>Getting Started</h2>
 
             <h3>How do I set up a workout?</h3>
-            <p>Tap the <span class="highlight">+</span> button in the top-left corner to open workout settings. Adjust
-                your
-                sets, reps, work time, and rest time by swiping up or down on each value. Tap the checkmark to confirm.
-            </p>
+            <p>Tap the <span class="highlight">+</span> button in the top-left corner to open workout settings. You have two options:</p>
+            <ul>
+                <li><strong>Manual setup:</strong> Adjust sets, reps, work time, and rest time by swiping up or down on each value</li>
+                <li><strong>Use a preset:</strong> Tap the <span class="highlight">list icon</span> to choose from built-in workout templates (Tabata, HIIT, Strength, and more)</li>
+            </ul>
+            <p>Tap the checkmark to confirm and start your workout.</p>
 
             <h3>How do I start the timer?</h3>
-            <p>Tap the play button or tap directly on the timer display. The app will show a countdown sequence before
-                starting your workout.</p>
+            <p>Tap the play button or tap directly on the timer display. The app will show a countdown sequence before starting your workout.</p>
 
             <h3>How do I reset the timer?</h3>
             <p>You can reset the timer by:</p>
             <ul>
                 <li>Double-tap anywhere on the screen</li>
                 <li>Double-tap or long-press the play/pause button</li>
-                <li>Tap the reset button when a workout is configured</li>
+                <li>Tap the reset button (circular arrow) when a workout is configured</li>
             </ul>
+
+            <h3>How do I change the theme?</h3>
+            <p>Tap the <span class="highlight">paintpalette icon</span> in the top-right corner to open the theme picker. Choose from 13 beautiful themes:</p>
+            <ul>
+                <li><strong>Dark themes:</strong> Matrix, Ocean, Aurora, Sky, Lavender, Sunset, Peach</li>
+                <li><strong>Light themes:</strong> Ocean Light, Sky Light, Lavender Light, Sunset Light, Peach Light, Aurora Light</li>
+            </ul>
+            <p>The background gradient animates smoothly, rotating continuously for a dynamic look.</p>
 
             <h2>Workout Phases</h2>
             <p>During your workout, you'll see these phases:</p>
@@ -252,28 +302,117 @@
             </ul>
 
             <h2>Features</h2>
+
+            <h3>Free Features</h3>
             <ul>
+                <li>1 free workout setup per day</li>
                 <li>Customizable sets, reps, work time, and rest time</li>
                 <li>Visual countdown sequence</li>
                 <li>Set and rep progress indicators</li>
+                <li>13 beautiful color themes with animated gradients</li>
                 <li>Works in portrait and landscape</li>
                 <li>Optimized for iPhone and iPad</li>
-                <li>Settings automatically saved</li>
+            </ul>
+
+            <h3>Premium Features <span class="premium-badge">PREMIUM</span></h3>
+            <ul>
+                <li>Unlimited workout setups</li>
+                <li>Statistics & workout history</li>
+                <li>Achievements and badges</li>
+                <li>Weekly progress charts</li>
+                <li>Streak tracking</li>
+                <li>Save and load custom presets</li>
+                <li>Apple Health integration</li>
             </ul>
 
             <h2>Troubleshooting</h2>
 
             <h3>The timer isn't starting</h3>
-            <p>Make sure you've tapped the play button or timer display. If you have a workout configured, the countdown
-                sequence will play first.</p>
+            <p>Make sure you've tapped the play button or timer display. If you have a workout configured, the countdown sequence will play first.</p>
 
             <h3>I can't see workout indicators</h3>
-            <p>Set and rep indicators only appear after configuring a workout using the + button and confirming with the
-                checkmark.</p>
+            <p>Set and rep indicators only appear after configuring a workout using the + button and confirming with the checkmark.</p>
+
+            <h3>I can't access my history or stats</h3>
+            <p>History, statistics, and achievements are premium features. Tap the clock icon and then "Unlock" to upgrade to Premium.</p>
+
+            <h3>My purchase didn't go through</h3>
+            <p>If your purchase didn't complete:</p>
+            <ul>
+                <li>Check your internet connection</li>
+                <li>Make sure you're signed in to the App Store</li>
+                <li>Try the "Restore Purchases" button if you've previously purchased</li>
+                <li>Restart the app and try again</li>
+            </ul>
 
             <div class="contact-box">
                 <h3>Need Help?</h3>
                 <p>For questions, feedback, or feature requests:</p>
+                <a href="mailto:hello@shashlyk.dev">hello@shashlyk.dev</a>
+            </div>
+        </div>
+
+        <!-- Premium Tab -->
+        <div id="premium" class="tab-content">
+            <h2>Premium Features</h2>
+            <p>Unlock the full potential of Fatbelly with Premium:</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Unlimited Workouts</h4>
+                    <p>Set up as many workouts as you want, every day.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Statistics & History</h4>
+                    <p>Track your progress over time with detailed workout history.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Achievements</h4>
+                    <p>Unlock badges and milestones as you progress.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Weekly Charts</h4>
+                    <p>Visualize your workout frequency with weekly progress charts.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Streak Tracking</h4>
+                    <p>Build momentum with current and longest streak tracking.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Custom Presets</h4>
+                    <p>Save your favorite workout configurations for quick access.</p>
+                </div>
+            </div>
+
+            <h2>Subscription Options</h2>
+
+            <h3>Yearly Premium</h3>
+            <p>Best for committed fitness enthusiasts. Billed annually with full access to all premium features.</p>
+
+            <h3>Lifetime Premium</h3>
+            <p>One-time purchase for permanent access. Best value for long-term users.</p>
+
+            <h2>Managing Your Subscription</h2>
+            <p>To manage or cancel your subscription:</p>
+            <ul>
+                <li>Open the <strong>Settings</strong> app on your device</li>
+                <li>Tap your <strong>Apple ID</strong> at the top</li>
+                <li>Tap <strong>Subscriptions</strong></li>
+                <li>Select <strong>Fatbelly</strong> to manage or cancel</li>
+            </ul>
+            <p>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.</p>
+
+            <h2>Restore Purchases</h2>
+            <p>If you've previously purchased Premium and need to restore it:</p>
+            <ul>
+                <li>Open the paywall (tap "Unlock" on the Progress screen)</li>
+                <li>Tap "Restore Purchases" at the bottom</li>
+                <li>Sign in with the same Apple ID used for the original purchase</li>
+            </ul>
+
+            <div class="contact-box">
+                <h3>Questions about Premium?</h3>
+                <p>Contact us for billing or subscription questions:</p>
                 <a href="mailto:hello@shashlyk.dev">hello@shashlyk.dev</a>
             </div>
         </div>
@@ -283,14 +422,12 @@
             <h2>Privacy Policy</h2>
             <p class="last-updated">Last updated: December 2025</p>
 
-            <div class="privacy-badge">Data Not Collected</div>
+            <div class="privacy-badge">Privacy First</div>
 
-            <p>Fatbelly is designed with your privacy in mind. We believe your workout data is your business, not ours.
-            </p>
+            <p>Fatbelly is designed with your privacy in mind. We believe your workout data is your business, not ours.</p>
 
             <h3>Data Collection</h3>
-            <p>Fatbelly does <span class="highlight">not</span> collect, store, or transmit any personal data. Period.
-            </p>
+            <p>Fatbelly collects <span class="highlight">minimal data</span> and keeps everything on your device.</p>
 
             <table class="data-table">
                 <tr>
@@ -304,9 +441,9 @@
                     <td>No name, email, or account required</td>
                 </tr>
                 <tr>
-                    <td>Health & Fitness Data</td>
-                    <td>No</td>
-                    <td>No workout data leaves your device</td>
+                    <td>Workout Data</td>
+                    <td>Local only</td>
+                    <td>Stored on your device, never transmitted</td>
                 </tr>
                 <tr>
                     <td>Usage Analytics</td>
@@ -331,34 +468,95 @@
             </table>
 
             <h3>Local Storage</h3>
-            <p>Your workout settings (sets, reps, work time, rest time) are stored locally on your device using iOS
-                UserDefaults. This data:</p>
+            <p>The following data is stored locally on your device:</p>
             <ul>
-                <li>Never leaves your device</li>
+                <li>Workout settings (sets, reps, work time, rest time)</li>
+                <li>Workout history (dates, durations, completion status)</li>
+                <li>Theme preferences</li>
+                <li>Achievement progress</li>
+                <li>Premium status</li>
+            </ul>
+            <p>This data:</p>
+            <ul>
+                <li>Never leaves your device (except for optional Health sync)</li>
                 <li>Is not transmitted to any server</li>
                 <li>Is not shared with any third parties</li>
                 <li>Is deleted when you uninstall the app</li>
             </ul>
 
-            <h3>Third-Party Services</h3>
-            <p>Fatbelly does not use any third-party services, SDKs, or analytics tools. The app operates entirely
-                offline.</p>
+            <h3>Apple Health Integration</h3>
+            <p>If you choose to enable Apple Health sync (Premium feature):</p>
+            <ul>
+                <li>Workout data is shared only with the Apple Health app</li>
+                <li>You control this through iOS Health permissions</li>
+                <li>We never access or store your Health data on external servers</li>
+            </ul>
 
-            <h3>External Links</h3>
-            <p>The app contains an optional tip link that, when tapped by the user, opens an external payment service
-                (Revolut) in Safari. This is user-initiated and subject to Revolut's own privacy policy.</p>
+            <h3>In-App Purchases</h3>
+            <p>Purchases are processed entirely by Apple through the App Store. We do not receive or store any payment information.</p>
+
+            <h3>Third-Party Services</h3>
+            <p>Fatbelly uses only:</p>
+            <ul>
+                <li><strong>Apple StoreKit:</strong> For processing in-app purchases (handled by Apple)</li>
+                <li><strong>Apple HealthKit:</strong> Optional workout sync (you control permissions)</li>
+            </ul>
+            <p>No other third-party services, SDKs, or analytics tools are used.</p>
 
             <h3>Children's Privacy</h3>
-            <p>Fatbelly does not collect any data from anyone, including children under 13. The app is safe for users of
-                all ages.</p>
+            <p>Fatbelly does not collect personal data from anyone, including children under 13. The app is safe for users of all ages.</p>
 
             <h3>Changes to This Policy</h3>
-            <p>If we ever change our privacy practices, we will update this page. However, our commitment to not
-                collecting your data will remain unchanged.</p>
+            <p>If we change our privacy practices, we will update this page. Our commitment to privacy will remain unchanged.</p>
 
             <div class="contact-box">
                 <h3>Questions?</h3>
                 <p>If you have any questions about our privacy practices:</p>
+                <a href="mailto:hello@shashlyk.dev">hello@shashlyk.dev</a>
+            </div>
+        </div>
+
+        <!-- Terms of Use Tab -->
+        <div id="terms" class="tab-content">
+            <h2>Terms of Use</h2>
+            <p class="last-updated">Last updated: December 2025</p>
+
+            <h3>Acceptance of Terms</h3>
+            <p>By downloading, installing, or using Fatbelly, you agree to these Terms of Use. If you do not agree, please do not use the app.</p>
+
+            <h3>License</h3>
+            <p>Fatbelly grants you a limited, non-exclusive, non-transferable license to use the app for personal, non-commercial purposes on devices you own or control.</p>
+
+            <h3>Subscriptions and Purchases</h3>
+            <ul>
+                <li>Premium features require a paid subscription or one-time purchase</li>
+                <li>Payment is processed through your Apple ID account</li>
+                <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period</li>
+                <li>You can manage subscriptions in your device's Settings</li>
+                <li>No refunds are provided for partial subscription periods</li>
+            </ul>
+
+            <h3>Health and Safety Disclaimer</h3>
+            <p><strong>Important:</strong> Fatbelly is a timer app, not a medical device or fitness advisor.</p>
+            <ul>
+                <li>Consult a healthcare provider before starting any exercise program</li>
+                <li>Listen to your body and stop if you experience pain or discomfort</li>
+                <li>The app does not provide medical advice, diagnosis, or treatment</li>
+                <li>You are solely responsible for your health and safety during workouts</li>
+            </ul>
+
+            <h3>Limitation of Liability</h3>
+            <p>Fatbelly is provided "as is" without warranties of any kind. We are not liable for any injuries, damages, or losses resulting from your use of the app.</p>
+
+            <h3>Modifications</h3>
+            <p>We reserve the right to modify or discontinue the app at any time. We may update these terms periodically, and continued use constitutes acceptance of changes.</p>
+
+            <h3>Governing Law</h3>
+            <p>These terms are governed by applicable laws. Any disputes shall be resolved in accordance with those laws.</p>
+
+            <div class="contact-box">
+                <h3>Questions?</h3>
+                <p>For any questions about these terms:</p>
                 <a href="mailto:hello@shashlyk.dev">hello@shashlyk.dev</a>
             </div>
         </div>
